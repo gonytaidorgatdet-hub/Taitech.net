@@ -8,4 +8,4 @@ services:
     envVars:
       - key: NODE_ENV
         value: production
-    healthCheckPath: /api/overview
+    healthCheckPath: /
