@@ -33,10 +33,10 @@ const borrowerSegments = [
 ]
 
 const loanRows = [
-  { borrower: 'Martha W.', product: 'Working capital', amount: '$18,200', status: 'On-time', due: '12 days', risk: 'Low' },
-  { borrower: 'Kibali Food Hub', product: 'Inventory finance', amount: '$42,500', status: 'Watchlist', due: '4 days', risk: 'Moderate' },
-  { borrower: 'Cedar Agro', product: 'Seasonal crop loan', amount: '$31,400', status: 'On-time', due: '19 days', risk: 'Low' },
-  { borrower: 'Nairobi Traders', product: 'Group lending', amount: '$27,900', status: 'Late', due: '2 days', risk: 'High' },
+  { borrower: 'Martha Nyebel.', product: 'Working capital', amount: '$18,200', status: 'On-time', due: '12 days', risk: 'Low' },
+  { borrower: 'Gambella Food Hub', product: 'Inventory finance', amount: '$42,500', status: 'Watchlist', due: '4 days', risk: 'Moderate' },
+  { borrower: 'Rumbek Agro', product: 'Seasonal crop loan', amount: '$31,400', status: 'On-time', due: '19 days', risk: 'Low' },
+  { borrower: 'Bor Fishing gruops', product: 'Group lending', amount: '$27,900', status: 'Late', due: '2 days', risk: 'High' },
 ]
 
 const riskItems = [
@@ -46,27 +46,26 @@ const riskItems = [
 ]
 
 const customerRows = [
-  { name: 'Faith Muthoni', type: 'Retail', group: 'Women enterprise', score: '92', status: 'Active', lastLoan: '$4,800', city: 'Nairobi' },
-  { name: 'Mambo Foods', type: 'SME', group: 'Food & retail', score: '88', status: 'Healthy', lastLoan: '$12,500', city: 'Kisumu' },
-  { name: 'Samuel Oduor', type: 'Agriculture', group: 'Farm input', score: '81', status: 'Review', lastLoan: '$7,200', city: 'Eldoret' },
-  { name: 'Amani SACCO', type: 'SACCO', group: 'Member lending', score: '94', status: 'Active', lastLoan: '$18,900', city: 'Mombasa' },
-  { name: 'Leah Njeri', type: 'Consumer', group: 'Payroll', score: '79', status: 'Watch', lastLoan: '$2,900', city: 'Nyeri' },
+  { name: 'Taidor Gatdet', type: 'Retail', group: 'Women enterprise', score: '92', status: 'Active', lastLoan: '$4,800', city: 'Malakal' },
+  { name: 'Mambo Foods', type: 'SME', group: 'Food & retail', score: '88', status: 'Healthy', lastLoan: '$12,500', city: 'Bor' },
+  { name: 'Kajaak Farms', type: 'Agriculture', group: 'Farm input', score: '81', status: 'Review', lastLoan: '$7,200', city: 'Wau' },
+  { name: 'NIMSA GRUOPS', type: 'SACCO', group: 'Member lending', score: '94', status: 'Active', lastLoan: '$18,900', city: 'Tonj' },
+  { name: 'Marion Atuhairwe', type: 'Consumer', group: 'Payroll', score: '79', status: 'Watch', lastLoan: '$2,900', city: 'Yie' },
 ]
 
 const collectionRows = [
-  { account: 'Nairobi Traders', agent: 'Jane M.', amount: '$24,800', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
-  { account: 'Cedar Agro', agent: 'Philip A.', amount: '$18,300', due: '12 Apr', status: 'Promised pay', bucket: '1-6 days' },
-  { account: 'Mambo Foods', agent: 'Aisha K.', amount: '$31,600', due: '8 Apr', status: 'In progress', bucket: '1-6 days' },
-  { account: 'Kibali Food Hub', agent: 'Chris O.', amount: '$42,500', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
+  { account: 'Martha Nyebel', agent: 'Jane M.', amount: '$21,476', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
+  { account: 'Bor Fishing gruops', agent: 'Philip A.', amount: '$33,480', due: '12 Apr', status: 'Promised pay', bucket: '1-6 days' },
+  { account: 'Rumbek Agro', agent: 'Aisha K.', amount: '$36,110', due: '8 Apr', status: 'In progress', bucket: '1-6 days' },
+  { account: 'Gambella Food Hub', agent: 'Chris O.', amount: '$49,513', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
 ]
 
 const riskAlerts = [
-  { name: 'Amani SACCO', exposure: '$420K', score: '68', category: 'Concentration risk', severity: 'High' },
-  { name: 'Cedar Agro', exposure: '$310K', score: '74', category: 'Seasonality risk', severity: 'Moderate' },
-  { name: 'Nairobi Traders', exposure: '$260K', score: '81', category: 'Delinquency risk', severity: 'High' },
-  { name: 'Leah Njeri', exposure: '$92K', score: '61', category: 'Income volatility', severity: 'Low' },
+  { name: 'TAITECH SACCO', exposure: '$420K', score: '68', category: 'Concentration risk', severity: 'High' },
+  { name: 'Bathel Gruops', exposure: '$310K', score: '74', category: 'Seasonality risk', severity: 'Moderate' },
+  { name: 'Gambella Boda Association', exposure: '$260K', score: '81', category: 'Delinquency risk', severity: 'High' },
+  { name: 'Udier Teacher Association', exposure: '$92K', score: '61', category: 'Income volatility', severity: 'Low' },
 ]
-
 const reportMetrics = [
   { label: 'Portfolio recovery', value: '92.8%', delta: '+3.4%', tone: 'green' },
   { label: 'Cash collection rate', value: '86.1%', delta: '+1.8%', tone: 'blue' },
@@ -84,10 +83,10 @@ const reportTrend = [
 ]
 
 const reportRows = [
-  { region: 'Nairobi', disbursed: '$3.1M', collected: '$2.8M', recovery: '90.3%', risk: 'Low' },
-  { region: 'Kisumu', disbursed: '$1.9M', collected: '$1.6M', recovery: '84.2%', risk: 'Moderate' },
-  { region: 'Eldoret', disbursed: '$2.4M', collected: '$2.1M', recovery: '87.6%', risk: 'Low' },
-  { region: 'Mombasa', disbursed: '$2.8M', collected: '$2.5M', recovery: '89.2%', risk: 'Moderate' },
+  { region: 'Malakal', disbursed: '$3.1M', collected: '$2.8M', recovery: '90.3%', risk: 'Low' },
+  { region: 'Yie', disbursed: '$1.9M', collected: '$1.6M', recovery: '84.2%', risk: 'Moderate' },
+  { region: 'Juba', disbursed: '$2.4M', collected: '$2.1M', recovery: '87.6%', risk: 'Low' },
+  { region: 'Bor', disbursed: '$2.8M', collected: '$2.5M', recovery: '89.2%', risk: 'Moderate' },
 ]
 
 const institutionProfiles = {
@@ -126,7 +125,7 @@ const institutionProfiles = {
       { borrower: 'Metro Foods', product: 'Term loan', amount: '$1.2M', status: 'Late', due: '2 days', risk: 'High' },
     ],
     customerRows: [
-      { name: 'Mary Njeri', type: 'Retail', group: 'Payroll', score: '94', status: 'Active', lastLoan: '$48K', city: 'Nairobi' },
+      { name: 'Mutoni Angel', type: 'Retail', group: 'Payroll', score: '94', status: 'Active', lastLoan: '$48K', city: 'Nairobi' },
       { name: 'Apex Traders', type: 'SME', group: 'Wholesale', score: '90', status: 'Healthy', lastLoan: '$210K', city: 'Mombasa' },
       { name: 'Kenyan Rail Logistics', type: 'Corporate', group: 'Transport', score: '88', status: 'Review', lastLoan: '$640K', city: 'Kisumu' },
       { name: 'Cedar Homes', type: 'Corporate', group: 'Real estate', score: '92', status: 'Active', lastLoan: '$1.1M', city: 'Nakuru' },
@@ -139,9 +138,9 @@ const institutionProfiles = {
     ],
     riskAlerts: [
       { name: 'Apex Manufacturing', exposure: '$4.2M', score: '68', category: 'Credit concentration', severity: 'High' },
-      { name: 'Nairobi Logistics', exposure: '$2.8M', score: '74', category: 'Operating risk', severity: 'Moderate' },
+      { name: 'Udier Logistics', exposure: '$2.8M', score: '74', category: 'Operating risk', severity: 'Moderate' },
       { name: 'Metro Foods', exposure: '$1.9M', score: '81', category: 'Portfolio stress', severity: 'High' },
-      { name: 'Cedar Homes', exposure: '$820K', score: '61', category: 'Liquidity strain', severity: 'Low' },
+      { name: 'Gambella Homes', exposure: '$820K', score: '61', category: 'Liquidity strain', severity: 'Low' },
     ],
     reportMetrics: [
       { label: 'Capital adequacy', value: '18.4%', delta: '+1.2%', tone: 'green' },
@@ -150,9 +149,9 @@ const institutionProfiles = {
       { label: 'Deposit growth', value: '9.6%', delta: '+1.1%', tone: 'amber' },
     ],
     reportRows: [
-      { region: 'Nairobi', disbursed: '$840K', collected: '$760K', recovery: '90.3%', risk: 'Low' },
-      { region: 'Nakuru', disbursed: '$610K', collected: '$560K', recovery: '91.8%', risk: 'Low' },
-      { region: 'Mombasa', disbursed: '$720K', collected: '$660K', recovery: '88.7%', risk: 'Moderate' },
+      { region: 'Udier', disbursed: '$840K', collected: '$760K', recovery: '90.3%', risk: 'Low' },
+      { region: 'Juba', disbursed: '$610K', collected: '$560K', recovery: '91.8%', risk: 'Low' },
+      { region: 'Malakal', disbursed: '$720K', collected: '$660K', recovery: '88.7%', risk: 'Moderate' },
       { region: 'Kisumu', disbursed: '$540K', collected: '$470K', recovery: '86.9%', risk: 'Moderate' },
     ],
     labels: {
@@ -195,27 +194,27 @@ const institutionProfiles = {
       { name: 'New savings', value: '$1.2M', detail: 'Member pipeline strong', color: 'purple' },
     ],
     loanRows: [
-      { borrower: 'Martha W.', product: 'Women enterprise loan', amount: '$18,200', status: 'On-time', due: '12 days', risk: 'Low' },
-      { borrower: 'Kibali Food Hub', product: 'Inventory finance', amount: '$42,500', status: 'Watchlist', due: '4 days', risk: 'Moderate' },
-      { borrower: 'Cedar Agro', product: 'Seasonal crop loan', amount: '$31,400', status: 'On-time', due: '19 days', risk: 'Low' },
-      { borrower: 'Nairobi Traders', product: 'Group lending', amount: '$27,900', status: 'Late', due: '2 days', risk: 'High' },
+      { borrower: 'Martha Nyebel.', product: 'Women enterprise loan', amount: '$18,200', status: 'On-time', due: '12 days', risk: 'Low' },
+      { borrower: 'Kule Food Hub', product: 'Inventory finance', amount: '$42,500', status: 'Watchlist', due: '4 days', risk: 'Moderate' },
+      { borrower: 'Gambella Agro', product: 'Seasonal crop loan', amount: '$31,400', status: 'On-time', due: '19 days', risk: 'Low' },
+      { borrower: 'Udier Traders', product: 'Group lending', amount: '$27,900', status: 'Late', due: '2 days', risk: 'High' },
     ],
     customerRows: [
-      { name: 'Faith Muthoni', type: 'Retail', group: 'Women enterprise', score: '92', status: 'Active', lastLoan: '$4,800', city: 'Nairobi' },
+      { name: 'Faith Nyebuony', type: 'Retail', group: 'Women enterprise', score: '92', status: 'Active', lastLoan: '$4,800', city: 'Nairobi' },
       { name: 'Mambo Foods', type: 'SME', group: 'Food & retail', score: '88', status: 'Healthy', lastLoan: '$12,500', city: 'Kisumu' },
-      { name: 'Samuel Oduor', type: 'Agriculture', group: 'Farm input', score: '81', status: 'Review', lastLoan: '$7,200', city: 'Eldoret' },
+      { name: 'Samuel Goy', type: 'Agriculture', group: 'Farm input', score: '81', status: 'Review', lastLoan: '$7,200', city: 'Eldoret' },
       { name: 'Amani SACCO', type: 'Group', group: 'Member lending', score: '94', status: 'Active', lastLoan: '$18,900', city: 'Mombasa' },
     ],
     collectionRows: [
-      { account: 'Nairobi Traders', agent: 'Jane M.', amount: '$24,800', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
-      { account: 'Cedar Agro', agent: 'Philip A.', amount: '$18,300', due: '12 Apr', status: 'Promised pay', bucket: '1-6 days' },
+      { account: 'Nairobi BOys', agent: 'Jane M.', amount: '$24,800', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
+      { account: 'Changkuoth Nyak Studio', agent: 'Philip A.', amount: '$18,300', due: '12 Apr', status: 'Promised pay', bucket: '1-6 days' },
       { account: 'Mambo Foods', agent: 'Aisha K.', amount: '$31,600', due: '8 Apr', status: 'In progress', bucket: '1-6 days' },
-      { account: 'Kibali Food Hub', agent: 'Chris O.', amount: '$42,500', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
+      { account: 'Yien Will', agent: 'Chris O.', amount: '$42,500', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
     ],
     riskAlerts: [
-      { name: 'Amani SACCO', exposure: '$420K', score: '68', category: 'Concentration risk', severity: 'High' },
-      { name: 'Cedar Agro', exposure: '$310K', score: '74', category: 'Seasonality risk', severity: 'Moderate' },
-      { name: 'Nairobi Traders', exposure: '$260K', score: '81', category: 'Delinquency risk', severity: 'High' },
+      { name: 'Arua Hill SACCO', exposure: '$420K', score: '68', category: 'Concentration risk', severity: 'High' },
+      { name: 'Mathiang Agro', exposure: '$310K', score: '74', category: 'Seasonality risk', severity: 'Moderate' },
+      { name: 'Udier Traders', exposure: '$260K', score: '81', category: 'Delinquency risk', severity: 'High' },
       { name: 'Leah Njeri', exposure: '$92K', score: '61', category: 'Income volatility', severity: 'Low' },
     ],
     reportMetrics: [
@@ -225,10 +224,10 @@ const institutionProfiles = {
       { label: 'Operating cost', value: '12.3%', delta: '-0.9%', tone: 'amber' },
     ],
     reportRows: [
-      { region: 'Nairobi', disbursed: '$3.1M', collected: '$2.8M', recovery: '90.3%', risk: 'Low' },
-      { region: 'Kisumu', disbursed: '$1.9M', collected: '$1.6M', recovery: '84.2%', risk: 'Moderate' },
-      { region: 'Eldoret', disbursed: '$2.4M', collected: '$2.1M', recovery: '87.6%', risk: 'Low' },
-      { region: 'Mombasa', disbursed: '$2.8M', collected: '$2.5M', recovery: '89.2%', risk: 'Moderate' },
+      { region: 'Malakal', disbursed: '$3.1M', collected: '$2.8M', recovery: '90.3%', risk: 'Low' },
+      { region: 'Yie', disbursed: '$1.9M', collected: '$1.6M', recovery: '84.2%', risk: 'Moderate' },
+      { region: 'Juba', disbursed: '$2.4M', collected: '$2.1M', recovery: '87.6%', risk: 'Low' },
+      { region: 'Bor ', disbursed: '$2.8M', collected: '$2.5M', recovery: '89.2%', risk: 'Moderate' },
     ],
     labels: {
       overview: 'Lending intelligence',
@@ -270,28 +269,28 @@ const institutionProfiles = {
       { name: 'Deposits growth', value: '$1.8M', detail: 'Strong member retention', color: 'purple' },
     ],
     loanRows: [
-      { borrower: 'Grace Wambui', product: 'School fees advance', amount: '$8,400', status: 'On-time', due: '10 days', risk: 'Low' },
-      { borrower: 'Tatu Traders', product: 'Business loan', amount: '$21,600', status: 'Watchlist', due: '5 days', risk: 'Moderate' },
-      { borrower: 'Mwea Farmers Group', product: 'Agri asset finance', amount: '$32,500', status: 'On-time', due: '17 days', risk: 'Low' },
-      { borrower: 'Nakuru Teachers Club', product: 'Salary advance', amount: '$15,200', status: 'Late', due: '2 days', risk: 'High' },
+      { borrower: 'Gatluak Wal', product: 'School fees advance', amount: '$8,400', status: 'On-time', due: '10 days', risk: 'Low' },
+      { borrower: 'Aney peter', product: 'Business loan', amount: '$21,600', status: 'Watchlist', due: '5 days', risk: 'Moderate' },
+      { borrower: 'Sarah farms', product: 'Agri asset finance', amount: '$32,500', status: 'On-time', due: '17 days', risk: 'Low' },
+      { borrower: 'Excel Farms', product: 'Salary advance', amount: '$15,200', status: 'Late', due: '2 days', risk: 'High' },
     ],
     customerRows: [
-      { name: 'Grace Wambui', type: 'Member', group: 'Salary', score: '95', status: 'Active', lastLoan: '$8,400', city: 'Nakuru' },
-      { name: 'Tatu Traders', type: 'Business', group: 'Retail', score: '89', status: 'Healthy', lastLoan: '$21,600', city: 'Nairobi' },
-      { name: 'Mwea Farmers Group', type: 'Co-op', group: 'Agriculture', score: '83', status: 'Review', lastLoan: '$32,500', city: 'Embu' },
-      { name: 'Kibra Teachers Club', type: 'Association', group: 'Payroll', score: '96', status: 'Active', lastLoan: '$15,200', city: 'Kisumu' },
+      { name: 'Grace Nyamal', type: 'Member', group: 'Salary', score: '95', status: 'Active', lastLoan: '$8,400', city: 'Udier' },
+      { name: 'Princess Adia', type: 'Business', group: 'Retail', score: '89', status: 'Healthy', lastLoan: '$21,600', city: 'Tonj' },
+      { name: 'Kajaak Boys', type: 'Co-op', group: 'Agriculture', score: '83', status: 'Review', lastLoan: '$32,500', city: 'Yie' },
+      { name: 'Kibra Teachers Club', type: 'Association', group: 'Payroll', score: '96', status: 'Active', lastLoan: '$15,200', city: 'Arua' },
     ],
     collectionRows: [
-      { account: 'Nakuru Teachers Club', agent: 'Jane M.', amount: '$18,200', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
+      { account: 'Udier Teachers Club', agent: 'Jane M.', amount: '$18,200', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
       { account: 'Mwea Farmers Group', agent: 'Philip A.', amount: '$24,300', due: '12 Apr', status: 'Promised pay', bucket: '1-6 days' },
       { account: 'Tatu Traders', agent: 'Aisha K.', amount: '$21,600', due: '8 Apr', status: 'In progress', bucket: '1-6 days' },
-      { account: 'Grace Wambui', agent: 'Chris O.', amount: '$8,400', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
+      { account: 'Grace Nyagoa', agent: 'Chris O.', amount: '$8,400', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
     ],
     riskAlerts: [
-      { name: 'Nakuru Teachers Club', exposure: '$480K', score: '66', category: 'Member arrears', severity: 'High' },
-      { name: 'Mwea Farmers Group', exposure: '$340K', score: '72', category: 'Seasonal cashflow', severity: 'Moderate' },
-      { name: 'Tatu Traders', exposure: '$220K', score: '79', category: 'Business risk', severity: 'High' },
-      { name: 'Grace Wambui', exposure: '$95K', score: '58', category: 'Income volatility', severity: 'Low' },
+      { name: 'TAITECH SACCO', exposure: '$480K', score: '66', category: 'Member arrears', severity: 'High' },
+      { name: 'Bathel Gruops', exposure: '$340K', score: '72', category: 'Seasonal cashflow', severity: 'Moderate' },
+      { name: 'Gambella Boda Association', exposure: '$220K', score: '79', category: 'Business risk', severity: 'High' },
+      { name: 'Udier Teacher Association', exposure: '$95K', score: '58', category: 'Income volatility', severity: 'Low' },
     ],
     reportMetrics: [
       { label: 'Member growth', value: '13.4%', delta: '+2.9%', tone: 'green' },
@@ -300,10 +299,10 @@ const institutionProfiles = {
       { label: 'Dividend payout', value: '9.1%', delta: '+0.8%', tone: 'amber' },
     ],
     reportRows: [
-      { region: 'Nakuru', disbursed: '$2.1M', collected: '$1.9M', recovery: '90.8%', risk: 'Low' },
-      { region: 'Embu', disbursed: '$1.6M', collected: '$1.4M', recovery: '87.9%', risk: 'Moderate' },
-      { region: 'Nairobi', disbursed: '$2.9M', collected: '$2.5M', recovery: '89.5%', risk: 'Low' },
-      { region: 'Kisumu', disbursed: '$1.8M', collected: '$1.5M', recovery: '84.1%', risk: 'Moderate' },
+      { region: 'Malakal', disbursed: '$2.1M', collected: '$1.9M', recovery: '90.8%', risk: 'Low' },
+      { region: 'Yie ', disbursed: '$1.6M', collected: '$1.4M', recovery: '87.9%', risk: 'Moderate' },
+      { region: 'Juba', disbursed: '$2.9M', collected: '$2.5M', recovery: '89.5%', risk: 'Low' },
+      { region: 'Bor', disbursed: '$1.8M', collected: '$1.5M', recovery: '84.1%', risk: 'Moderate' },
     ],
     labels: {
       overview: 'Member services intelligence',
@@ -596,10 +595,10 @@ function App() {
           </thead>
           <tbody>
             {[
-              ['Taidor Gatdet.', 'Working capital', 'Kisumu', '$18,200', '18.0%', 'Approved'],
-              ['Kibali Food Hub', 'Inventory finance', 'Nairobi', '$42,500', '16.5%', 'Review'],
-              ['Cedar Agro', 'Seasonal crop loan', 'Eldoret', '$31,400', '15.0%', 'Approved'],
-              ['Nairobi Traders', 'Group lending', 'Mombasa', '$27,900', '20.0%', 'Pending'],
+              ['Martha Nyebel.', 'Working capital', 'Juba', '$18,200', '18.0%', 'Approved'],
+              ['Gambella Food Hub', 'Inventory finance', 'Gambella', '$42,500', '16.5%', 'Review'],
+              ['Rumbek Agro', 'Seasonal crop loan', 'Rumbek', '$31,400', '15.0%', 'Approved'],
+              ['Bor Fishing gruops', 'Group lending', 'Bor', '$27,900', '20.0%', 'Pending'],
             ].map(([borrower, product, branch, amount, apr, status]) => (
               <tr key={borrower}>
                 <td>{borrower}</td>
@@ -735,10 +734,10 @@ function App() {
           </thead>
           <tbody>
             {[
-              ['Mwanzo Women Club', 'Target savings', '$1.4M', '318', '9.2%', 'Healthy'],
-              ['Kiboko Agribusiness', 'Agri wallet', '$2.1M', '402', '8.8%', 'Healthy'],
-              ['Starlight SACCO', 'Emergency fund', '$980K', '216', '8.3%', 'Review'],
-              ['Urban Savers', 'Daily savings', '$1.8M', '468', '7.9%', 'Healthy'],
+              ['Thiang-kiir Women Club', 'Target savings', '$1.4M', '318', '9.2%', 'Healthy'],
+              ['Borchar Agribusiness', 'Agri wallet', '$2.1M', '402', '8.8%', 'Healthy'],
+              ['Tonj SACCO', 'Emergency fund', '$980K', '216', '8.3%', 'Review'],
+              ['Rumbek Savers', 'Daily savings', '$1.8M', '468', '7.9%', 'Healthy'],
             ].map(([group, product, balance, members, yieldRate, status]) => (
               <tr key={group}>
                 <td>{group}</td>

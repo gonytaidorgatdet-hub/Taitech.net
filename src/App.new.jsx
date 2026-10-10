@@ -20,7 +20,7 @@ const fallbackData = {
       { label: 'Default ratio', value: '2.8%', delta: '-0.9%', tone: 'amber' },
     ],
     performanceBars: [
-      { name: 'Retail', value: 84, color: '#5eead4' },
+      { name: 'Retail', value: 84, color: '#338b7e' },
       { name: 'SME', value: 72, color: '#86efac' },
       { name: 'Agri', value: 63, color: '#fbbf24' },
       { name: 'SACCO', value: 89, color: '#fb923c' },
@@ -32,10 +32,10 @@ const fallbackData = {
       { sector: 'Consumer loans', total: '$4.6M', share: '18%', trend: '+1.8%' },
     ],
     loanRows: [
-      { borrower: 'Taidor Gatdet.', product: 'Working capital', amount: '$18,200', status: 'On-time', due: '12 days', risk: 'Low' },
-      { borrower: 'Gatluak Wal', product: 'Inventory finance', amount: '$42,500', status: 'Watchlist', due: '4 days', risk: 'Moderate' },
-      { borrower: 'Cedar Agro', product: 'Seasonal crop loan', amount: '$31,400', status: 'On-time', due: '19 days', risk: 'Low' },
-      { borrower: 'Eastern Jikeny SACCO', product: 'Group lending', amount: '$27,900', status: 'Late', due: '2 days', risk: 'High' },
+      { borrower: 'Martha Nyebel.', product: 'Working capital', amount: '$18,200', status: 'On-time', due: '12 days', risk: 'Low' },
+      { borrower: 'Gambella food Hub', product: 'Inventory finance', amount: '$42,500', status: 'Watchlist', due: '4 days', risk: 'Moderate' },
+      { borrower: 'Rumbek Agro', product: 'Seasonal crop loan', amount: '$31,400', status: 'On-time', due: '19 days', risk: 'Low' },
+      { borrower: 'Bor Fishing gruops', product: 'Group lending', amount: '$27,900', status: 'Late', due: '2 days', risk: 'High' },
     ],
     riskItems: [
       { name: 'B2B pipeline', value: '$1.2M', detail: '6 deals need review', color: 'amber' },
@@ -50,10 +50,10 @@ const fallbackData = {
       { label: 'Repayments due', value: '$2.4M', delta: 'Due soon', tone: 'blue' },
     ],
     rows: [
-      { borrower: 'Taidor Gatdet.', product: 'Working capital', branch: 'Juba', amount: '$18,200', apr: '18.0%', status: 'Approved' },
-      { borrower: 'Gatluak Wal', product: 'Inventory finance', branch: 'Nairobi', amount: '$42,500', apr: '16.5%', status: 'Review' },
-      { borrower: 'Cedar Agro', product: 'Seasonal crop loan', branch: 'Arua', amount: '$31,400', apr: '15.0%', status: 'Approved' },
-      { borrower: 'Eastern Jikeny SACCO', product: 'Group lending', branch: 'Malakal', amount: '$27,900', apr: '20.0%', status: 'Pending' },
+      { borrower: 'Martha Nyebel.', product: 'Working capital', branch: 'Juba', amount: '$18,200', apr: '18.0%', status: 'Approved' },
+      { borrower: 'Gambella food Hub', product: 'Inventory finance', branch: 'Gambella', amount: '$42,500', apr: '16.5%', status: 'Review' },
+      { borrower: 'Rumbek Agro', product: 'Seasonal crop loan', branch: 'Rumbek', amount: '$31,400', apr: '15.0%', status: 'Approved' },
+      { borrower: 'Bor fishing gruops', product: 'Group lending', branch: 'Bor ', amount: '$27,900', apr: '20.0%', status: 'Pending' },
     ],
   },
   customers: {
@@ -64,11 +64,11 @@ const fallbackData = {
       { label: 'Retention', value: '94.6%', delta: '+1.1%', tone: 'green' },
     ],
     rows: [
-      { name: 'Taidor Gatdet', type: 'Retail', group: 'Women enterprise', score: '92', status: 'Active', lastLoan: '$4,800', city: 'Nairobi' },
-      { name: 'Mambo Foods', type: 'SME', group: 'Food & retail', score: '88', status: 'Healthy', lastLoan: '$12,500', city: 'Kisumu' },
-      { name: 'Samuel Oduor', type: 'Agriculture', group: 'Farm input', score: '81', status: 'Review', lastLoan: '$7,200', city: 'Eldoret' },
-      { name: 'Goy SACCO', type: 'SACCO', group: 'Member lending', score: '94', status: 'Active', lastLoan: '$18,900', city: 'Mombasa' },
-      { name: 'Marion Atuhairwe', type: 'Consumer', group: 'Payroll', score: '79', status: 'Watch', lastLoan: '$2,900', city: 'Nyeri' },
+      { name: 'Taidor Gatdet', type: 'Retail', group: 'Women enterprise', score: '92', status: 'Active', lastLoan: '$4,800', city: 'Malakal' },
+      { name: 'Mambo Foods', type: 'SME', group: 'Food & retail', score: '88', status: 'Healthy', lastLoan: '$12,500', city: 'Bor' },
+      { name: 'kajaak Farms', type: 'Agriculture', group: 'Farm input', score: '81', status: 'Review', lastLoan: '$7,200', city: 'Wau' },
+      { name: 'NIMSA GRUOPS', type: 'SACCO', group: 'Member lending', score: '94', status: 'Active', lastLoan: '$18,900', city: 'Tonj' },
+      { name: 'Marion Atuhairwe', type: 'Consumer', group: 'Payroll', score: '79', status: 'Watch', lastLoan: '$2,900', city: 'Yie' },
     ],
   },
   savings: {
@@ -101,10 +101,10 @@ const fallbackData = {
       { month: 'Jun', value: 89 },
     ],
     rows: [
-      { account: 'Nairobi Traders', agent: 'Jane M.', amount: '$24,800', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
-      { account: 'Cedar Agro', agent: 'Philip A.', amount: '$18,300', due: '12 Apr', status: 'Promised pay', bucket: '1-6 days' },
-      { account: 'Mambo Foods', agent: 'Aisha K.', amount: '$31,600', due: '8 Apr', status: 'In progress', bucket: '1-6 days' },
-      { account: 'Kibali Food Hub', agent: 'Chris O.', amount: '$42,500', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
+      { account: 'Martha Nyebel', agent: 'Jane M.', amount: '$21,476', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
+      { account: 'Bor Fishing gruops', agent: 'Philip A.', amount: '$33,480', due: '12 Apr', status: 'Promised pay', bucket: '1-6 days' },
+      { account: 'Rumbek Agro', agent: 'Aisha K.', amount: '$36,110', due: '8 Apr', status: 'In progress', bucket: '1-6 days' },
+      { account: 'Gambella Food Hub', agent: 'Chris O.', amount: '$49,513', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
     ],
   },
   risk: {
@@ -116,10 +116,10 @@ const fallbackData = {
     ],
     trend: [78, 75, 68, 62, 58, 49, 44],
     alerts: [
-      { name: 'Afro Boys SACCO', exposure: '$420K', score: '68', category: 'Concentration risk', severity: 'High' },
-      { name: 'Cedar Agro', exposure: '$310K', score: '74', category: 'Seasonality risk', severity: 'Moderate' },
-      { name: 'Nairobi Traders', exposure: '$260K', score: '81', category: 'Delinquency risk', severity: 'High' },
-      { name: 'Leah Njeri', exposure: '$92K', score: '61', category: 'Income volatility', severity: 'Low' },
+      { name: 'TAITECH SACCO ', exposure: '$420K', score: '68', category: 'Concentration risk', severity: 'High' },
+      { name: 'Bathel Gruops', exposure: '$310K', score: '74', category: 'Seasonality risk', severity: 'Moderate' },
+      { name: 'GAmbella Boda Association', exposure: '$260K', score: '81', category: 'Delinquency risk', severity: 'High' },
+      { name: 'Udier Teacher Association', exposure: '$92K', score: '61', category: 'Income volatility', severity: 'Low' },
     ],
   },
   reports: {
@@ -130,10 +130,10 @@ const fallbackData = {
       { label: 'Operating cost', value: '12.3%', delta: '-0.9%', tone: 'amber' },
     ],
     rows: [
-      { region: 'Nairobi', disbursed: '$3.1M', collected: '$2.8M', recovery: '90.3%', risk: 'Low' },
-      { region: 'Upper Nile', disbursed: '$1.9M', collected: '$1.6M', recovery: '84.2%', risk: 'Moderate' },
-      { region: 'Western Equatoria', disbursed: '$2.4M', collected: '$2.1M', recovery: '87.6%', risk: 'Low' },
-      { region: 'Tony East', disbursed: '$2.8M', collected: '$2.5M', recovery: '89.2%', risk: 'Moderate' },
+      { region: 'Malakal', disbursed: '$3.1M', collected: '$2.8M', recovery: '90.3%', risk: 'Low' },
+      { region: 'Yie', disbursed: '$1.9M', collected: '$1.6M', recovery: '84.2%', risk: 'Moderate' },
+      { region: 'Juba', disbursed: '$2.4M', collected: '$2.1M', recovery: '87.6%', risk: 'Low' },
+      { region: 'Bor', disbursed: '$2.8M', collected: '$2.5M', recovery: '89.2%', risk: 'Moderate' },
     ],
   },
 }
@@ -199,6 +199,20 @@ const recordForms = {
       { name: 'status', label: 'Status', options: ['Pending', 'Review', 'Approved'] },
     ],
   },
+  customer: {
+    endpoint: 'customers',
+    title: 'Add a customer',
+    submitLabel: 'Save customer',
+    fields: [
+      { name: 'name', label: 'Customer name' },
+      { name: 'type', label: 'Customer type', options: ['Retail', 'SME', 'Agriculture', 'SACCO', 'Consumer'] },
+      { name: 'group', label: 'Group' },
+      { name: 'score', label: 'Score', type: 'number', placeholder: '90' },
+      { name: 'status', label: 'Status', options: ['Active', 'Healthy', 'Review', 'Watch'] },
+      { name: 'lastLoan', label: 'Last loan', placeholder: '$4,800' },
+      { name: 'city', label: 'City' },
+    ],
+  },
   savings: {
     endpoint: 'savings',
     title: 'Add a savings product',
@@ -225,6 +239,18 @@ const recordForms = {
       { name: 'status', label: 'Status', options: ['Promised pay', 'In progress', 'Follow-up'] },
     ],
   },
+  risk: {
+    endpoint: 'risk',
+    title: 'Add a risk alert',
+    submitLabel: 'Save alert',
+    fields: [
+      { name: 'name', label: 'Client name' },
+      { name: 'category', label: 'Risk category' },
+      { name: 'exposure', label: 'Exposure', placeholder: '$420K' },
+      { name: 'score', label: 'Score', type: 'number', placeholder: '68' },
+      { name: 'severity', label: 'Severity', options: ['High', 'Moderate', 'Low'] },
+    ],
+  },
 }
 
 const getRecordDefaults = (recordType) => Object.fromEntries(
@@ -243,16 +269,22 @@ function App() {
       return null
     }
   })
-  const [authForm, setAuthForm] = useState({ email: 'gatdetgonytaidor@gmail.com', password: 'Taidor29@' })
+  const [authForm, setAuthForm] = useState({ email: 'Taitechweb@gmail.com', password: 'Taitech29@' })
   const [authError, setAuthError] = useState('')
   const [dashboardData, setDashboardData] = useState(fallbackData)
   const [isSigningIn, setIsSigningIn] = useState(false)
   const [searchTerm, setSearchTerm] = useState('')
   const [statusFilter, setStatusFilter] = useState('all')
   const [recordType, setRecordType] = useState(null)
+  const [recordIndex, setRecordIndex] = useState(null)
   const [recordForm, setRecordForm] = useState({})
   const [recordError, setRecordError] = useState('')
   const [isSavingRecord, setIsSavingRecord] = useState(false)
+  const [customerEditor, setCustomerEditor] = useState(null)
+  const [customerError, setCustomerError] = useState('')
+  const [isSavingCustomer, setIsSavingCustomer] = useState(false)
+  const isAdminUser = (account) => Boolean(account && (account.email === 'admin@gofinance.io' || account.role === 'Operations' || account.role === 'Admin'))
+  const canManageRecords = isAdminUser(user)
 
   useEffect(() => {
     localStorage.setItem('gofinance-theme', theme)
@@ -358,31 +390,75 @@ function App() {
     clearSessionState()
   }
 
-  const openRecordModal = (nextRecordType) => {
+  const openRecordModal = (nextRecordType, initialRecord = null, index = null) => {
+    if (!canManageRecords) {
+      setRecordError('Admin access is required to manage records.')
+      return
+    }
+
     setRecordType(nextRecordType)
-    setRecordForm(getRecordDefaults(nextRecordType)) 
+    setRecordIndex(index)
+    setRecordForm(initialRecord ? { ...initialRecord } : getRecordDefaults(nextRecordType))
     setRecordError('')
+  }
+
+  const handleRemoveRecord = async (endpoint, index, refreshPages = [endpoint]) => {
+    if (!canManageRecords) return
+
+    const confirmed = window.confirm('Remove this record?')
+    if (!confirmed) return
+
+    const token = localStorage.getItem('gofinance-token')
+    if (!token) return
+
+    try {
+      const response = await fetch(`/api/${endpoint}/${index}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+
+      const data = await response.json().catch(() => ({}))
+      if (!response.ok) {
+        throw new Error(data.error || 'Unable to remove this record.')
+      }
+
+      await Promise.all(refreshPages.map(fetchPageData))
+      if (endpoint === 'loans') {
+        await fetchPageData('overview')
+      }
+    } catch (error) {
+      setRecordError(error.message)
+    }
   }
 
   const handleRecordSubmit = async (event) => {
     event.preventDefault()
     const config = recordForms[recordType]
     const token = localStorage.getItem('gofinance-token')
-    if (!config || !token) return
+    if (!config || !token || !canManageRecords) {
+      setRecordError('Admin access is required to manage records.')
+      return
+    }
+
+    const isEditing = Number.isInteger(recordIndex) && recordIndex >= 0
+    const method = isEditing ? 'PUT' : 'POST'
+    const url = isEditing ? `/api/${config.endpoint}/${recordIndex}` : `/api/${config.endpoint}`
 
     setRecordError('')
     setIsSavingRecord(true)
 
     try {
-      const response = await fetch(`/api/${config.endpoint}`, {
-        method: 'POST',
+      const response = await fetch(url, {
+        method,
         headers: {
           Authorization: `Bearer ${token}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(recordForm),
       })
-      const data = await response.json()
+      const data = await response.json().catch(() => ({}))
 
       if (!response.ok) {
         throw new Error(data.error || 'Unable to save this record.')
@@ -392,6 +468,8 @@ function App() {
       await Promise.all(pagesToRefresh.map(fetchPageData))
       setActiveView(config.endpoint)
       setRecordType(null)
+      setRecordIndex(null)
+      setRecordForm({})
     } catch (error) {
       setRecordError(error.message)
     } finally {
@@ -448,6 +526,68 @@ function App() {
     )
   }
 
+  const renderCustomerEditor = () => {
+    if (!customerEditor) return null
+
+    return (
+      <div className="modal-backdrop" role="presentation" onMouseDown={closeCustomerEditor}>
+        <section className="record-modal" role="dialog" aria-modal="true" aria-labelledby="customer-editor-title" onMouseDown={(event) => event.stopPropagation()}>
+          <div className="modal-header">
+            <div>
+              <span className="mini-label">Admin edit</span>
+              <h2 id="customer-editor-title">Edit customer record</h2>
+            </div>
+            <button type="button" className="ghost-btn small" onClick={closeCustomerEditor}>Close</button>
+          </div>
+
+          <form className="record-form" onSubmit={handleCustomerSave}>
+            <div className="form-grid">
+              <label>
+                <span>Customer name</span>
+                <input value={customerEditor.name ?? ''} onChange={(event) => setCustomerEditor((current) => ({ ...current, name: event.target.value }))} placeholder="Client name" required />
+              </label>
+              <label>
+                <span>Customer type</span>
+                <select value={customerEditor.type ?? 'Retail'} onChange={(event) => setCustomerEditor((current) => ({ ...current, type: event.target.value }))}>
+                  {['Retail', 'SME', 'Agriculture', 'SACCO', 'Consumer'].map((option) => <option key={option} value={option}>{option}</option>)}
+                </select>
+              </label>
+              <label>
+                <span>Group</span>
+                <input value={customerEditor.group ?? ''} onChange={(event) => setCustomerEditor((current) => ({ ...current, group: event.target.value }))} placeholder="Women enterprise" required />
+              </label>
+              <label>
+                <span>Score</span>
+                <input type="number" value={customerEditor.score ?? ''} onChange={(event) => setCustomerEditor((current) => ({ ...current, score: event.target.value }))} placeholder="90" required />
+              </label>
+              <label>
+                <span>Status</span>
+                <select value={customerEditor.status ?? 'Active'} onChange={(event) => setCustomerEditor((current) => ({ ...current, status: event.target.value }))}>
+                  {['Active', 'Healthy', 'Review', 'Watch'].map((option) => <option key={option} value={option}>{option}</option>)}
+                </select>
+              </label>
+              <label>
+                <span>Last loan</span>
+                <input value={customerEditor.lastLoan ?? ''} onChange={(event) => setCustomerEditor((current) => ({ ...current, lastLoan: event.target.value }))} placeholder="$4,800" required />
+              </label>
+              <label>
+                <span>City</span>
+                <input value={customerEditor.city ?? ''} onChange={(event) => setCustomerEditor((current) => ({ ...current, city: event.target.value }))} placeholder="Nairobi" required />
+              </label>
+            </div>
+
+            {customerError && <div className="auth-error">{customerError}</div>}
+
+            <div className="modal-actions">
+              <button type="button" className="secondary-btn" onClick={closeCustomerEditor}>Cancel</button>
+              <button type="submit" className="primary-btn" disabled={isSavingCustomer}>{isSavingCustomer ? 'Saving...' : 'Save changes'}</button>
+            </div>
+          </form>
+        </section>
+      </div>
+    )
+  }
+
   const renderTableToolbar = (rows, fileName) => (
     <div className="table-toolbar">
       <div className="toolbar-filters">
@@ -482,6 +622,88 @@ function App() {
       </button>
     </div>
   )
+
+  const openCustomerEditor = (customer, index) => {
+    setCustomerEditor({
+      index,
+      name: customer.name === 'Private customer' ? '' : (customer.name ?? ''),
+      type: customer.type ?? 'Retail',
+      group: customer.group ?? '',
+      score: customer.score ?? '',
+      status: customer.status ?? 'Active',
+      lastLoan: customer.lastLoan ?? '',
+      city: customer.city ?? '',
+    })
+    setCustomerError('')
+  }
+
+  const closeCustomerEditor = () => {
+    setCustomerEditor(null)
+    setCustomerError('')
+  }
+
+  const handleRemoveCustomer = async (index) => {
+    if (!canManageRecords) return
+
+    const confirmed = window.confirm('Remove this customer record?')
+    if (!confirmed) return
+
+    try {
+      const token = localStorage.getItem('gofinance-token')
+      const response = await fetch(`/api/customers/${index}`, {
+        method: 'DELETE',
+        headers: {
+          Authorization: `Bearer ${token}`,
+        },
+      })
+
+      const data = await response.json().catch(() => ({}))
+      if (!response.ok) {
+        throw new Error(data.error || 'Unable to remove this customer record.')
+      }
+
+      await fetchPageData('customers')
+    } catch (error) {
+      setCustomerError(error.message)
+    }
+  }
+
+    const handleCustomerSave = async (event) => {
+    event.preventDefault()
+    if (!customerEditor || !canManageRecords) return
+
+    const token = localStorage.getItem('gofinance-token')
+    if (!token) return
+
+    setCustomerError('')
+    setIsSavingCustomer(true)
+
+    try {
+      const response = await fetch(`/api/customers/${customerEditor.index}`, {
+        method: 'PUT',
+        headers: {
+          Authorization: `Bearer ${token}`,
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          ...customerEditor,
+          name: customerEditor.name.trim() || 'Private customer',
+        }),
+      })
+
+      const data = await response.json().catch(() => ({}))
+      if (!response.ok) {
+        throw new Error(data.error || 'Unable to save customer updates.')
+      }
+
+      setCustomerEditor(null)
+      await fetchPageData('customers')
+    } catch (error) {
+      setCustomerError(error.message)
+    } finally {
+      setIsSavingCustomer(false)
+    }
+  }
 
   const renderOverview = () => {
     const overview = dashboardData.overview ?? fallbackData.overview
@@ -751,7 +973,9 @@ function App() {
             <span className="mini-label">Client base</span>
             <h2>Customer portfolio</h2>
           </div>
-          <button type="button" className="primary-btn">+ Add customer</button>
+          {canManageRecords ? (
+            <button type="button" className="primary-btn" onClick={() => openRecordModal('customer')}>+ Add customer</button>
+          ) : null}
         </div>
 
         <div className="kpi-grid four-up">
@@ -782,11 +1006,12 @@ function App() {
                 <th>Status</th>
                 <th>Last loan</th>
                 <th>City</th>
+                {canManageRecords ? <th>Admin</th> : null}
               </tr>
             </thead>
             <tbody>
-              {rows.map((customer) => (
-                <tr key={customer.name}>
+              {rows.map((customer, index) => (
+                <tr key={`${customer.name}-${index}`}>
                   <td>{customer.name}</td>
                   <td>{customer.type}</td>
                   <td>{customer.group}</td>
@@ -794,6 +1019,14 @@ function App() {
                   <td><span className={`status-pill ${formatStatusClass(customer.status)}`}>{customer.status}</span></td>
                   <td>{customer.lastLoan}</td>
                   <td>{customer.city}</td>
+                  {canManageRecords ? (
+                    <td>
+                      <div className="row-actions">
+                        <button type="button" className="ghost-btn small" onClick={() => openCustomerEditor(customer, index)}>Edit</button>
+                        <button type="button" className="ghost-btn small danger" onClick={() => handleRemoveCustomer(index)}>Remove</button>
+                      </div>
+                    </td>
+                  ) : null}
                 </tr>
               ))}
             </tbody>
@@ -1281,7 +1514,7 @@ function App() {
           </form>
 
           <div className="demo-credentials">
-            Demo: admin@gofinance.io / admin123
+            Demo: Taitechweb@gmail.com / Taitech29@
           </div>
         </div>
       </div>

@@ -1,16 +1,25 @@
-# React + Vite
+# GoFinance
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+GoFinance is a local finance operations dashboard with a React frontend and an Express API.
 
-Currently, two official plugins are available:
+## Run locally
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+1. Install dependencies:
+   npm install
+2. Start the frontend and backend together:
+   npm run dev:full
+3. Open the URL printed by Vite in the terminal, usually:
+   http://localhost:5173
 
-## React Compiler
+If port 5173 is already in use, Vite will automatically move to the next available port (for example http://localhost:5174).
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Login
 
-## Expanding the Oxlint configuration
+Use one of the seeded demo accounts:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+- admin@gofinance.io / admin123
+- ops@gofinance.io / demo123
+
+## Common startup issue
+
+If sign-in fails with a 502 or `Unexpected end of JSON input`, the backend API is usually not running. Always start it with `npm run dev:full` so both the Express API on port 3001 and the Vite app run together.
