@@ -8,7 +8,7 @@
 You can deploy to one or both platforms. A single Render deployment runs standalone.
 Dual deployment lets you scale frontend (Vercel edge) and backend (Render) separately.
 
-## Quick Start
+## Quick Startu u 
 
 ### 1. Prepare Your GitHub Repository
 
@@ -27,7 +27,7 @@ git push origin master
 2. Click **New** ? **Web Service**
 3. Connect your GitHub repository
 4. Configure:
-   - **Name**: gofinance-api
+   - **Name**: gofinance-api                                           
    - **Branch**: master
    - **Build Command**: 
 pm install && npm run build
@@ -65,7 +65,7 @@ Once live, you'll get a URL like:
 `
 https://gofinance-vercel-xxxx.vercel.app
 `
-
+ 
 **Notes:**
 - Faster edge delivery via Vercel CDN
 - Keeps frontend and backend separate

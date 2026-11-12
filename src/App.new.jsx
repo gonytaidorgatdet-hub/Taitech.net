@@ -20,10 +20,10 @@ const fallbackData = {
       { label: 'Default ratio', value: '2.8%', delta: '-0.9%', tone: 'amber' },
     ],
     performanceBars: [
-      { name: 'Retail', value: 84, color: '#338b7e' },
-      { name: 'SME', value: 72, color: '#86efac' },
-      { name: 'Agri', value: 63, color: '#fbbf24' },
-      { name: 'SACCO', value: 89, color: '#fb923c' },
+      { name: 'Retail', value: 84, color: 'var(--chart-retail)' },
+      { name: 'SME', value: 72, color: 'var(--chart-sme)' },
+      { name: 'Agri', value: 63, color: 'var(--chart-agri)' },
+      { name: 'SACCO', value: 89, color: 'var(--chart-sacco)' },
     ],
     borrowerSegments: [
       { sector: 'Micro business', total: '$8.4M', share: '34%', trend: '+4.2%' },
@@ -361,7 +361,12 @@ function App() {
         body: JSON.stringify(authForm),
       })
 
-      const data = await response.json()
+      let data
+      try {
+        data = await response.json()
+      } catch {
+        throw new Error('Unable to reach the sign-in service. Please try again.')
+      }
       if (!response.ok) {
         throw new Error(data.error || 'Login failed')
       }
@@ -1167,7 +1172,7 @@ function App() {
               <div className="segment-row">
                 <div>
                   <strong>Mobile collections</strong>
-                  <span>724 payments scheduled</span>
+                  <span>726 payments scheduled</span>
                 </div>
                 <div className="segment-meta">
                   <b>73%</b>
@@ -1593,6 +1598,7 @@ function App() {
         {renderContent()}
       </main>
       {renderRecordModal()}
+      {renderCustomerEditor()}
     </div>
   )
 }

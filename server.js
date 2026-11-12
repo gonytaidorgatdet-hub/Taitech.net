@@ -25,13 +25,13 @@ const seedData = {
       { sector: 'Consumer loans', total: '$4.6M', share: '18%', trend: '+1.8%' },
     ],
     loanRows: [
-      { borrower: 'Martha Nyebel.', product: 'Working capital', amount: '$18,200', status: 'On-time', due: '12 days', risk: 'Low' },
-      { borrower: 'Gambella Food Hub', product: 'Inventory finance', amount: '$42,500', status: 'Watchlist', due: '4 days', risk: 'Moderate' },
+      { borrower: 'Martha  Nyebel.', product: 'Working capital', amount: '$18,200', status: 'On-time', due: '12 days', risk: 'Low' },
+      { borrower: 'Gambella food Hub', product: 'Inventory finance', amount: '$42,500', status: 'Watchlist', due: '4 days', risk: 'Moderate' },
       { borrower: 'Rumbek Agro', product: 'Seasonal crop loan', amount: '$31,400', status: 'On-time', due: '19 days', risk: 'Low' },
-      { borrower: 'Bor fishing gruops', product: 'Group lending', amount: '$27,900', status: 'Late', due: '2 days', risk: 'High' },
+      { borrower: 'Bor fihing gruops', product: 'Group lending', amount: '$27,900', status: 'Late', due: '2 days', risk: 'High' },
     ],
     riskItems: [
-      { name: 'B2B pipeline', value: '$1.2M', detail: '6 deals need review', color: 'amber' },
+      { name: 'B2B pipeline', value: '$1.2M', detail:  '6 deals need review', color: 'amber' },
       { name: 'Delayed repayments', value: '$780K', detail: '18 accounts > 7 days', color: 'red' },
       { name: 'High value customers', value: '42', detail: 'Exposure > $100K', color: 'purple' },
     ],
@@ -46,7 +46,7 @@ const seedData = {
       { borrower: 'Martha Nyebel.', product: 'Working capital', branch: 'Kisumu', amount: '$18,200', apr: '18.0%', status: 'Approved' },
       { borrower: 'Gambella Food Hub', product: 'Inventory finance', branch: 'Nairobi', amount: '$42,500', apr: '16.5%', status: 'Review' },
       { borrower: 'Rumbek Agro', product: 'Seasonal crop loan', branch: 'Eldoret', amount: '$31,400', apr: '15.0%', status: 'Approved' },
-      { borrower: 'Bor Fishing gruops', product: 'Group lending', branch: 'Mombasa', amount: '$27,900', apr: '20.0%', status: 'Pending' },
+      { borrower: 'Bor fihing gruops', product: 'Group lending', branch: 'Mombasa', amount: '$27,900', apr: '20.0%', status: 'Pending' },
     ],
   },
   customers: {
@@ -57,11 +57,11 @@ const seedData = {
       { label: 'Retention', value: '94.6%', delta: '+1.1%', tone: 'green' },
     ],
     rows: [
-      { name: 'Taidor Gatdet', type: 'Retail', group: 'Women enterprise', score: '92', status: 'Active', lastLoan: '$4,800', city: 'Malakal' },
-      { name: 'Mambo Foods', type: 'SME', group: 'Food & retail', score: '88', status: 'Healthy', lastLoan: '$12,500', city: 'Bor' },
-      { name: 'Kajaak Farms', type: 'Agriculture', group: 'Farm input', score: '81', status: 'Review', lastLoan: '$7,200', city: 'Wau' },
-      { name: 'NIMSA GRUOPS', type: 'SACCO', group: 'Member lending', score: '94', status: 'Active', lastLoan: '$18,900', city: 'Tonj' },
-      { name: 'Marion Atuhairwe', type: 'Consumer', group: 'Payroll', score: '79', status: 'Watch', lastLoan: '$2,900', city: 'Yie' },
+      { name: 'Taidor Gatdet', type: 'Retail', group: 'Women enterprise', score: '92', status: 'Active', lastLoan: '$4,800', city: 'Nairobi' },
+      { name: 'Mambo Foods', type: 'SME', group: 'Food & retail', score: '88', status: 'Healthy', lastLoan: '$12,500', city: 'Kisumu' },
+      { name: 'Rumbek Agro', type: 'Agriculture', group: 'Farm input', score: '81', status: 'Review', lastLoan: '$7,200', city: 'Eldoret' },
+      { name: 'NIMSA GRUOPS', type: 'SACCO', group: 'Member lending', score: '94', status: 'Active', lastLoan: '$18,900', city: 'Mombasa' },
+      { name: 'Marion Atuhairwe', type: 'Consumer', group: 'Payroll', score: '79', status: 'Watch', lastLoan: '$2,900', city: 'Nyeri' },
     ],
   },
   savings: {
@@ -93,11 +93,11 @@ const seedData = {
       { month: 'May', value: 82 },
       { month: 'Jun', value: 89 },
     ],
-    rows: [ 
-      { account: 'Martha Nyebel', agent: 'Jane M.', amount: '$21,476', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
-      { account: 'Bor Fishing gruops', agent: 'Philip A.', amount: '$33,480', due: '12 Apr', status: 'Promised pay', bucket: '1-6 days' },
-      { account: 'Rumbek Agro', agent: 'Aisha K.', amount: '$36,110', due: '8 Apr', status: 'In progress', bucket: '1-6 days' },
-      { account: 'Gambella Food Hub', agent: 'Chris O.', amount: '$49,513', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
+    rows: [
+      { account: 'Martha Nyebel.', agent: 'Jane M.', amount: '$24,800', due: '15 Apr', status: 'Follow-up', bucket: '7-14 days' },
+      { account: 'Bor Fishing groups', agent: 'Philip A.', amount: '$18,300', due: '12 Apr', status: 'Promised pay', bucket: '1-6 days' },
+      { account: 'Rumbek Agro', agent: 'Aisha K.', amount: '$31,600', due: '8 Apr', status: 'In progress', bucket: '1-6 days' },
+      { account: 'Gambella Food Hub', agent: 'Chris O.', amount: '$42,500', due: '21 Apr', status: 'Escalated', bucket: '15+ days' },
     ],
   },
   risk: {
@@ -110,7 +110,7 @@ const seedData = {
     trend: [78, 75, 68, 62, 58, 49, 44],
     alerts: [
       { name: 'TAITECH SACCO', exposure: '$420K', score: '68', category: 'Concentration risk', severity: 'High' },
-      { name: 'Bathel Gruops', exposure: '$310K', score: '74', category: 'Seasonality risk', severity: 'Moderate' },
+      { name: 'Bathel Groups', exposure: '$310K', score: '74', category: 'Seasonality risk', severity: 'Moderate' },
       { name: 'Gambella Boda Association', exposure: '$260K', score: '81', category: 'Delinquency risk', severity: 'High' },
       { name: 'Udier Teacher Association', exposure: '$92K', score: '61', category: 'Income volatility', severity: 'Low' },
     ],
