@@ -71,7 +71,7 @@ Your app is running locally at **http://localhost:5173**
 | Frontend  | ?    | ?     | ?     |
 | API       | ?    | ?     | Proxied |
 | Database  | Memory| Memory | N/A    |
-
+=
 ## ?? Important Notes
 
 ### In-Memory Database
