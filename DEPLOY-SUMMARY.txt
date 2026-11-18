@@ -55,12 +55,9 @@ pm run start
 6. Click **Deploy**
 7. Test at your new Vercel URL
 
-## ?? Test Credentials
+## Authentication Setup
 
-`
-Email:    Taitechweb@gmail.com
-Password: Taitech29@
-`
+Configure user accounts with the GOFINANCE_USERS environment variable on the API host.
 
 ## ?? Current Local Status
 
@@ -77,7 +74,7 @@ Your app is running locally at **http://localhost:5173**
 ### In-Memory Database
 - All data resets when app restarts
 - Great for demos, not for production
-- To add persistence: Connect Postgres in Render and update server.js
+- To add persistence: Connect Postgres in Render and update server/index.js
 
 ### Security
 - Demo credentials are hardcoded (for testing only)

@@ -131,10 +131,36 @@ const seedData = {
   },
 }
 
-const users = [
-  { email: 'Taitechweb@gmail.com', password: 'Taitech29@', name: 'TAidor@.', role: 'Operations' },
-  { email: 'gonygatdettaidor@gmail.com', password: 'Taitech29@', name: 'Nyakim@.', role: 'Risk Manager' },
-]
+function readUsers() {
+  const configuredUsers = process.env.GOFINANCE_USERS
+  if (!configuredUsers) return []
+
+  let parsedUsers
+  try {
+    parsedUsers = JSON.parse(configuredUsers)
+  } catch {
+    throw new Error('GOFINANCE_USERS must contain valid JSON.')
+  }
+
+  if (!Array.isArray(parsedUsers) || parsedUsers.some((user) => (
+    !user ||
+    typeof user.email !== 'string' || !user.email.trim() ||
+    typeof user.password !== 'string' || !user.password ||
+    typeof user.name !== 'string' || !user.name.trim() ||
+    typeof user.role !== 'string' || !user.role.trim()
+  ))) {
+    throw new Error('GOFINANCE_USERS must be a JSON array of users with email, password, name, and role.')
+  }
+
+  return parsedUsers.map((user) => ({
+    ...user,
+    email: user.email.trim(),
+    name: user.name.trim(),
+    role: user.role.trim(),
+  }))
+}
+
+const users = readUsers()
 
 const sessions = new Map()
 
@@ -153,7 +179,7 @@ function readRequiredFields(body, fields) {
 }
 
 function isAdminUser(user) {
-  return Boolean(user && (user.email === 'Taitechweb@gmail.com' || user.role === 'Operations' || user.role === 'Admin'))
+  return Boolean(user && (user.role === 'Operations' || user.role === 'Admin'))
 }
 
 function authMiddleware(req, res, next) {
@@ -184,6 +210,10 @@ function requireAdmin(req, res, next) {
 app.use(express.json())
 
 app.post('/api/login', (req, res) => {
+  if (users.length === 0) {
+    return res.status(503).json({ error: 'Authentication is not configured on this server.' })
+  }
+
   const { email, password } = req.body || {}
   const user = users.find((entry) => entry.email === email && entry.password === password)
 

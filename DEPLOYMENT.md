@@ -75,19 +75,18 @@ https://gofinance-vercel-xxxx.vercel.app
 
 ### Render Only
 1. Open https://gofinance-api-xxxx.onrender.com
-2. Login with:
-   - Email: Taitechweb@gmail.com
-   - Password: Taitech29@
+2. Configure `GOFINANCE_USERS` in the Render environment settings before testing login.
 
 ### Vercel + Render
 1. Open https://gofinance-vercel-xxxx.vercel.app
-2. Same credentials
+2. Configure `GOFINANCE_USERS` on the Render API service before testing login.
 
 ## Environment Variables
 
 ### Render
 - NODE_ENV=production (set automatically)
 - PORT (assigned dynamically)
+- GOFINANCE_USERS (JSON array of user records; configure in Render, not in Git)
 
 ### Vercel
 - VITE_API_URL=https://your-render-app.onrender.com (required if using Render backend)
@@ -128,18 +127,16 @@ Currently, GoFinance uses **in-memory data**. All changes reset when the service
 
 To add persistence:
 1. Connect a **Postgres database** (Render offers free tier)
-2. Update server.js to query the database instead of seedData
+2. Update `server/index.js` to query the database instead of seedData
 3. Implement migrations with 
 pm install drizzle-orm
 
 ## Security
 
-?? **Important**: The demo credentials are hardcoded in server.js:
-- Taitechweb@gmail.com / Taitech29@
-- gonygatdettaidor@gmail.com / Taitech29@
+Credentials are read from the `GOFINANCE_USERS` environment variable. Configure it through your hosting provider's secret/environment settings and never commit real passwords.
 
 For production:
-1. Move credentials to Render Env Vars
+1. Use strong, unique passwords
 2. Implement proper authentication (JWT, OAuth, etc.)
 3. Add HTTPS (both platforms provide free SSL)
 4. Implement rate limiting on API endpoints

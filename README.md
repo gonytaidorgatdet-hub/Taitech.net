@@ -19,12 +19,22 @@ GoFinance is a finance operations dashboard for lenders, MFIs, SACCOs, and finte
 - Local seeded data for demo purposes
 - Render/Vercel-friendly config files
 
-## Demo login
+## Authentication setup
 
-Use the seeded demo account:
+Credentials are not included in the repository. Configure the API host's `GOFINANCE_USERS` environment variable with a JSON array of users. For example:
 
-- Email: Taitechweb@gmail.com
-- Password: Taitech29@
+```json
+[
+  {
+    "email": "admin@example.com",
+    "password": "replace-with-a-long-unique-password",
+    "name": "Admin",
+    "role": "Admin"
+  }
+]
+```
+
+Use unique, strong passwords and set this value through your hosting provider's environment settings. Do not commit real credentials.
 
 ## Getting started
 
@@ -66,7 +76,7 @@ This project includes deployment configuration for Render and Vercel-style hosti
 ## Project structure
 
 - `src/` – React frontend
-- `server.js` – Express backend and seeded data
+- `server/index.js` – Express backend and seeded data
 - `render.yaml` – Render deployment config
 - `vercel.json` – Vercel deployment config
 - `vite.config.js` – Vite dev server and proxy config
